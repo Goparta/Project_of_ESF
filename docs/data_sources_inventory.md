@@ -1,0 +1,1 @@
+| 1 | m.tntu.edu.ua schedule (group page) | HTML (server-rendered) | https://m.tntu.edu.ua/?p=uk/schedule&s=fis-si42 | #Schedule | docs/samples-schedule/fis-si42.csv - приклад вивинтаження з сайту | group code in URL: s=si-42 |
