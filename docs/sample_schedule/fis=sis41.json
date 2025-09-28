@@ -1,0 +1,123 @@
+[
+  {
+    "group": "fis-sis41",
+    "day": "четвер",
+    "subgroup": "all",
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "all",
+    "subject": "Тестування і діагностика програмно-апаратних засобів",
+    "type": "лабораторна",
+    "location": "К1-606"
+  },
+  {
+    "group": "fis-sis41",
+    "day": "понеділок",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Комп'ютерні мережі",
+    "type": "лекція",
+    "location": "К1-401"
+  },
+  {
+    "group": "fis-sis41",
+    "day": "вівторок",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Інженерія програмного забезпечення",
+    "type": "лекція",
+    "location": "К1-705"
+  },
+  {
+    "group": "fis-sis41",
+    "day": "середа",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Комп'ютерні та вбудовані системи",
+    "type": "лекція",
+    "location": "К1-705"
+  },
+  {
+    "group": "fis-sis41",
+    "day": "четвер",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Тестування і діагностика програмно-апаратних засобів",
+    "type": "лекція",
+    "location": "К1-705"
+  },
+  {
+    "group": "fis-sis41",
+    "day": "п'ятниця",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Інженерія програмного забезпечення",
+    "type": "лабораторна",
+    "location": "К1-603"
+  },
+  {
+    "group": "fis-sis41",
+    "day": "понеділок",
+    "subgroup": "all",
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Комп'ютерні мережі",
+    "type": "лабораторна",
+    "location": "К1-603"
+  },
+  {
+    "group": "fis-sis41",
+    "day": "вівторок",
+    "subgroup": "all",
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Комп'ютерні та вбудовані системи",
+    "type": "лабораторна",
+    "location": "К1-606"
+  },
+  {
+    "group": "fis-sis41",
+    "day": "середа",
+    "subgroup": "all",
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Захист інформації в інформаційно-комунікаційних системах",
+    "type": "лабораторна",
+    "location": "К1-805"
+  },
+  {
+    "group": "fis-sis41",
+    "day": "четвер",
+    "subgroup": "all",
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Іноземна мова професійно-ділового спрямування (англійська)",
+    "type": "практична",
+    "location": "К1-311"
+  },
+  {
+    "group": "fis-sis41",
+    "day": "п'ятниця",
+    "subgroup": "all",
+    "lesson": "6",
+    "period": "16:10-17:30",
+    "week": "all",
+    "subject": "Захист інформації в інформаційно-комунікаційних системах",
+    "type": "лекція",
+    "location": "ATutor"
+  }
+]
