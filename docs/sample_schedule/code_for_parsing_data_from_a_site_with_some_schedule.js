@@ -1,4 +1,4 @@
-// Вставити у DevTools Console на сторінці з розкладом
+// Універсальний парсер розкладів з підтримкою корпусів (К1..К11) і парсингу rooms
 (function(){
   const ROOT_SELECTOR = '#Content > #Schedule';
   const TABLE_SELECTOR = '#ScheduleWeek';
@@ -7,7 +7,62 @@
     "5":"14:40-16:00","6":"16:10-17:30","7":"17:40-19:00"
   };
   const weekOrder = ['понеділок','вівторок','середа','четвер',"п'ятниця"];
+  const KNOWN_BUILDINGS = Array.from({length:11}, (_,i)=>`К${i+1}`); // К1..К11
 
+  // Нормалізація: замінити ASCII K->кирилиця К, при потребі
+  function normalizeLetterK(s){
+    if(!s) return s;
+    // якщо є латинська K чи k і поруч цифра — поміняємо на кириличну К
+    return s.replace(/\b[Kk](?=\s*-?\s*\d)/g, 'К');
+  }
+
+  // Парсимо один кусок location (наприклад "лабораторна\nК1-606" вже відрізано; тут будемо обробляти "К1-606" або "ATutor")
+  function parseRoomPart(part){
+    if(!part) return null;
+    let p = part.replace(/(аудиторія|ауд\.|ауд)/ig,'').trim();
+    p = p.replace(/\u00A0/g,' '); // no-break space -> space
+    p = p.replace(/^\s+|\s+$/g,'');
+    p = normalizeLetterK(p);
+    // Try match building pattern: К<number> optionally with - or space then room
+    const bMatch = p.match(/(К\s*-?\s*\d{1,2})\s*[-\s:]?\s*([A-Za-zА-Яа-я0-9\-]+)/i);
+    let building = null, room = null;
+    if(bMatch){
+      building = bMatch[1].replace(/\s+/g,'').replace(/К/,'К'); // "К1"
+      building = building.replace(/[Kk]/,'К').replace(/\s+/g,'');
+      // extract digits from building
+      building = building.replace(/К-?/,'К').replace(/[^К\d]/g,'');
+      room = bMatch[2].trim();
+    } else {
+      // alternative: pattern like "К1" only or "ATutor" or just "601"
+      const onlyBuilding = p.match(/^(К\s*-?\s*\d{1,2})$/i);
+      if(onlyBuilding){
+        building = onlyBuilding[1].replace(/\s+/g,'').replace(/[Kk]/,'К');
+        room = '';
+      } else {
+        // maybe "601" or "ATutor" or "Main-101"
+        room = p;
+      }
+    }
+    if(building) building = building.replace(/[^К0-9]/g,''); // ensure "К<number>"
+    if(room) {
+      room = room.replace(/[^\wА-Яа-я0-9\-]/g,'').trim();
+      if(room === '') room = null;
+    }
+    const full = building ? (room ? `${building}-${room}` : building) : (room||'').toString();
+    // validate building
+    const building_valid = building ? KNOWN_BUILDINGS.includes(building) : false;
+    return { building: building || null, room: room || null, full: full || null, building_valid };
+  }
+
+  // Розбити locationText на частини (multiple rooms) за роздільниками
+  function splitLocationText(locText){
+    if(!locText) return [];
+    // common separators: ',', '/', '|', ';', ' та '
+    const parts = locText.split(/[,\/\|;]+|\s+та\s+/i).map(p=>p.trim()).filter(Boolean);
+    return parts;
+  }
+
+  // ---- початок основного парсингу ----
   const root = document.querySelector(ROOT_SELECTOR);
   if(!root){ console.error('ROOT не знайдено:', ROOT_SELECTOR); return; }
   const table = root.querySelector(TABLE_SELECTOR) || root.querySelector('table');
@@ -37,12 +92,12 @@
     }
   }
 
-  // --- Створюємо матрицю з mapping originMap ---
+  // --- Матриця + originMap ---
   const trs = Array.from(table.querySelectorAll('tbody tr'));
   const nRows = trs.length;
   const nCols = 1 + headerDays.length;
   const matrix = Array.from({length:nRows}, ()=> Array(nCols).fill(null));
-  const originMap = new Map(); // element -> {r,c,rowspan,colspan}
+  const originMap = new Map();
   for(let r=0;r<nRows;r++){
     const cells = Array.from(trs[r].querySelectorAll('th,td'));
     let c = 0;
@@ -62,7 +117,7 @@
     }
   }
 
-  // --- Lesson blocks (номер пари / період) тільки з origin у колонці 0 ---
+  // --- Lesson blocks ---
   const lessonBlocks = [];
   originMap.forEach((pos, el) => {
     if(pos.c !== 0) return;
@@ -80,7 +135,7 @@
     return {lesson:'', period:''};
   }
 
-  // --- Формуємо результати ---
+  // --- Збираємо результати з розбитими rooms ---
   const results = [];
   const seen = new Set();
   const groupCode = (function(){ try{ return (new URL(location.href)).searchParams.get('s')||'' }catch(e){return ''}})();
@@ -107,9 +162,8 @@
       const his = byDayStart[ds];
       const dayName = headerDays[ds].day;
       const dayFullSpan = daySpan[ds] || 1;
-      // Визначаємо week:
-      // Якщо клітинка охоплює стільки рядків, скільки rowspan у lessonBlock => 'all'
-      // Інакше weekIndex = (pos.r - lb.startRow) + 1
+
+      // week determination (1,2,all)
       let week = '1';
       if(lb.rowspan && rs >= lb.rowspan) week = 'all';
       else {
@@ -117,22 +171,33 @@
         week = (idx === 0) ? '1' : (idx === 1 ? '2' : String(idx+1));
       }
 
-      // визначаємо, чи покриває клітинка весь день
       const coversWholeDay = (Math.min(...his) <= ds) && (Math.max(...his) >= ds + dayFullSpan - 1);
 
+      // content extraction
+      const subjEl = cell.querySelector('a');
+      const subject = subjEl ? subjEl.innerText.trim().replace(/\s+/g,' ') : (cell.innerText.trim().split('\n')[0]||'').trim();
+      const info = cell.querySelector('.Info');
+      let type = '', locationText = '';
+      if(info){
+        const lines = info.innerText.trim().split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+        if(lines.length>0) type = lines[0];
+        if(lines.length>1) locationText = lines.slice(1).join(' | ');
+      } else {
+        // спроба знайти строку після посилання
+        const divs = Array.from(cell.querySelectorAll('div')).map(d=>d.innerText.trim()).filter(Boolean);
+        if(divs.length>1) locationText = divs.slice(1).join(' | ');
+      }
+
+      // Парсимо locationText у масив roomParts
+      const roomParts = splitLocationText(locationText);
+      const rooms = roomParts.map(p => parseRoomPart(p)).filter(Boolean);
+
+      const hasContent = subject || type || rooms.length>0;
+      if(!hasContent) return;
+
+      // якщо покриває весь день => subgroup 'all' і створюємо 1 запис
       if(coversWholeDay){
-        const subjEl = cell.querySelector('a');
-        const subject = subjEl ? subjEl.innerText.trim().replace(/\s+/g,' ') : (cell.innerText.trim().split('\n')[0]||'').trim();
-        const info = cell.querySelector('.Info');
-        let type='', location='';
-        if(info){
-          const lines = info.innerText.trim().split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
-          if(lines.length>0) type = lines[0];
-          if(lines.length>1) location = lines.slice(1).join(' | ');
-        }
-        const hasContent = subject || type || location;
-        if(!hasContent) return;
-        const key = [dayName, lb.lesson, 'all', subject, type, location, week].join('|');
+        const key = [dayName, lb.lesson, 'all', subject, type, JSON.stringify(rooms), week].join('|');
         if(seen.has(key)) return;
         seen.add(key);
         results.push({
@@ -142,25 +207,17 @@
           lesson: lb.lesson||'',
           period: lb.period||'',
           week: week,
-          subject, type, location
+          subject: subject||'',
+          type: type||'',
+          rooms: rooms
         });
       } else {
+        // інакше — по підгрупах
         his.forEach(hi => {
           const dayStartForHi = dayStartIdx[hi] !== undefined ? dayStartIdx[hi] : hi;
           const offset = hi - dayStartForHi;
           const subgroup = offset + 1;
-          const subjEl = cell.querySelector('a');
-          const subject = subjEl ? subjEl.innerText.trim().replace(/\s+/g,' ') : (cell.innerText.trim().split('\n')[0]||'').trim();
-          const info = cell.querySelector('.Info');
-          let type='', location='';
-          if(info){
-            const lines = info.innerText.trim().split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
-            if(lines.length>0) type = lines[0];
-            if(lines.length>1) location = lines.slice(1).join(' | ');
-          }
-          const hasContent = subject || type || location;
-          if(!hasContent) return;
-          const key = [dayName, lb.lesson, subgroup, subject, type, location, week].join('|');
+          const key = [dayName, lb.lesson, subgroup, subject, type, JSON.stringify(rooms), week].join('|');
           if(seen.has(key)) return;
           seen.add(key);
           results.push({
@@ -170,32 +227,41 @@
             lesson: lb.lesson||'',
             period: lb.period||'',
             week: week,
-            subject, type, location
+            subject: subject||'',
+            type: type||'',
+            rooms: rooms
           });
         });
       }
     });
   });
 
-  // --- Підсумок: упорядкувати дні та підрахунок ---
+  // --- Підсумок та CSV/JSON копію ---
   const byDay = {};
   weekOrder.forEach(d=>byDay[d]=[]);
   headerDays.forEach(h=>{ if(!byDay[h.day]) byDay[h.day]=[]; });
   results.forEach(r=>{ if(!byDay[r.day]) byDay[r.day]=[]; byDay[r.day].push(r); });
   const summary = {}; Object.keys(byDay).forEach(k=>summary[k]=byDay[k].length);
 
-  // CSV (без lecturer і raw) з полем week
-  const fields = ['group','day','week','subgroup','lesson','period','subject','type','location'];
+  // CSV: колонка rooms - joined by " | " (full)
+  const fields = ['group','day','week','subgroup','lesson','period','subject','type','rooms'];
   const escape = s => `"${String(s===undefined||s===null?'':s).replace(/"/g,'""')}"`;
   const csvLines = [fields.map(escape).join(',')];
-  results.forEach(r => csvLines.push(fields.map(f => escape(r[f])).join(',')));
+  results.forEach(r=>{
+    const roomsJoined = (r.rooms || []).map(x => x.full || (x.building? (x.building + (x.room?('-'+x.room):'')) : x.room)).join(' | ');
+    const row = {
+      group: r.group, day: r.day, week: r.week, subgroup: r.subgroup,
+      lesson: r.lesson, period: r.period, subject: r.subject, type: r.type, rooms: roomsJoined
+    };
+    csvLines.push(fields.map(f => escape(row[f])).join(','));
+  });
   const csv = csvLines.join('\n');
 
   try{ copy(csv); console.log('CSV скопійовано в буфер обміну. Вставте у файл і збережіть .csv'); }catch(e){ console.warn('Не вдалося скопіювати CSV'); }
-  try{ copy(JSON.stringify(results, null, 2)); }catch(e){}
+  try{ copy(JSON.stringify(results, null, 2)); console.log('JSON скопійовано в буфер обміну.'); }catch(e){}
 
   console.log('Загалом записів:', results.length);
   console.log('Підсумок по днях:', summary);
-  console.log('Перші 20 записів (з week):', results.slice(0,20));
+  console.log('Перші 20 записів (з rooms):', results.slice(0,20));
   return { results, byDay, summary, csv };
 })();
