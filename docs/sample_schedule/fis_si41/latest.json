@@ -1,0 +1,308 @@
+[
+  {
+    "group": "fis-si41",
+    "day": "п'ятниця",
+    "subgroup": 2,
+    "lesson": "2",
+    "period": "9:30-10:50",
+    "week": "all",
+    "subject": "Комп'ютерні та вбудовані системи",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "605",
+        "full": "К1-605",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "понеділок",
+    "subgroup": 2,
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "all",
+    "subject": "Комп'ютерні мережі",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "505",
+        "full": "К1-505",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "вівторок",
+    "subgroup": 2,
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "all",
+    "subject": "Тестування і діагностика програмно-апаратних засобів",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "606",
+        "full": "К1-606",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "середа",
+    "subgroup": 1,
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "all",
+    "subject": "Інженерія програмного забезпечення",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "606",
+        "full": "К1-606",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "п'ятниця",
+    "subgroup": 1,
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "all",
+    "subject": "Комп'ютерні та вбудовані системи",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "603",
+        "full": "К1-603",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "понеділок",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Комп'ютерні мережі",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "401",
+        "full": "К1-401",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "вівторок",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Інженерія програмного забезпечення",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "середа",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Комп'ютерні та вбудовані системи",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "четвер",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Тестування і діагностика програмно-апаратних засобів",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "понеділок",
+    "subgroup": 1,
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Комп'ютерні мережі",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "505",
+        "full": "К1-505",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "вівторок",
+    "subgroup": 1,
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Тестування і діагностика програмно-апаратних засобів",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "603",
+        "full": "К1-603",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "вівторок",
+    "subgroup": 2,
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Захист інформації в інформаційно-комунікаційних системах",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "801",
+        "full": "К1-801",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "середа",
+    "subgroup": 2,
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Інженерія програмного забезпечення",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "606",
+        "full": "К1-606",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "четвер",
+    "subgroup": "all",
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "1",
+    "subject": "Іноземна мова професійно-ділового спрямування (англійська)",
+    "type": "практична",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "303",
+        "full": "К1-303",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "четвер",
+    "subgroup": "all",
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "2",
+    "subject": "Іноземна мова професійно-ділового спрямування (англійська)",
+    "type": "практична",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "309",
+        "full": "К1-309",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "вівторок",
+    "subgroup": 1,
+    "lesson": "6",
+    "period": "16:10-17:30",
+    "week": "all",
+    "subject": "Захист інформації в інформаційно-комунікаційних системах",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "803",
+        "full": "К1-803",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si41",
+    "day": "п'ятниця",
+    "subgroup": "all",
+    "lesson": "6",
+    "period": "16:10-17:30",
+    "week": "all",
+    "subject": "Захист інформації в інформаційно-комунікаційних системах",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": null,
+        "room": "ATutor",
+        "full": "ATutor",
+        "building_valid": false
+      }
+    ]
+  }
+]
