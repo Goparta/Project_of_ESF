@@ -1,0 +1,200 @@
+[
+  {
+    "group": "fis-sis41",
+    "day": "четвер",
+    "subgroup": "all",
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "all",
+    "subject": "Тестування і діагностика програмно-апаратних засобів",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "606",
+        "full": "К1-606",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-sis41",
+    "day": "понеділок",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Комп'ютерні мережі",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "401",
+        "full": "К1-401",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-sis41",
+    "day": "вівторок",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Інженерія програмного забезпечення",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-sis41",
+    "day": "середа",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Комп'ютерні та вбудовані системи",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-sis41",
+    "day": "четвер",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Тестування і діагностика програмно-апаратних засобів",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-sis41",
+    "day": "п'ятниця",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Інженерія програмного забезпечення",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "603",
+        "full": "К1-603",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-sis41",
+    "day": "понеділок",
+    "subgroup": "all",
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Комп'ютерні мережі",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "603",
+        "full": "К1-603",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-sis41",
+    "day": "вівторок",
+    "subgroup": "all",
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Комп'ютерні та вбудовані системи",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "606",
+        "full": "К1-606",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-sis41",
+    "day": "середа",
+    "subgroup": "all",
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Захист інформації в інформаційно-комунікаційних системах",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "805",
+        "full": "К1-805",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-sis41",
+    "day": "четвер",
+    "subgroup": "all",
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "all",
+    "subject": "Іноземна мова професійно-ділового спрямування (англійська)",
+    "type": "практична",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "311",
+        "full": "К1-311",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-sis41",
+    "day": "п'ятниця",
+    "subgroup": "all",
+    "lesson": "6",
+    "period": "16:10-17:30",
+    "week": "all",
+    "subject": "Захист інформації в інформаційно-комунікаційних системах",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": null,
+        "room": "ATutor",
+        "full": "ATutor",
+        "building_valid": false
+      }
+    ]
+  }
+]
