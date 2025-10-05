@@ -8,7 +8,14 @@
     "week": "all",
     "subject": "Комп'ютерні та вбудовані системи",
     "type": "лабораторна",
-    "location": "К1-605"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "605",
+        "full": "К1-605",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -19,7 +26,14 @@
     "week": "all",
     "subject": "Комп'ютерні мережі",
     "type": "лабораторна",
-    "location": "К1-505"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "505",
+        "full": "К1-505",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -30,7 +44,14 @@
     "week": "all",
     "subject": "Тестування і діагностика програмно-апаратних засобів",
     "type": "лабораторна",
-    "location": "К1-606"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "606",
+        "full": "К1-606",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -41,7 +62,14 @@
     "week": "all",
     "subject": "Інженерія програмного забезпечення",
     "type": "лабораторна",
-    "location": "К1-606"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "606",
+        "full": "К1-606",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -52,7 +80,14 @@
     "week": "all",
     "subject": "Комп'ютерні та вбудовані системи",
     "type": "лабораторна",
-    "location": "К1-603"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "603",
+        "full": "К1-603",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -63,7 +98,14 @@
     "week": "all",
     "subject": "Комп'ютерні мережі",
     "type": "лекція",
-    "location": "К1-401"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "401",
+        "full": "К1-401",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -74,7 +116,14 @@
     "week": "all",
     "subject": "Інженерія програмного забезпечення",
     "type": "лекція",
-    "location": "К1-705"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -85,7 +134,14 @@
     "week": "all",
     "subject": "Комп'ютерні та вбудовані системи",
     "type": "лекція",
-    "location": "К1-705"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -96,7 +152,14 @@
     "week": "all",
     "subject": "Тестування і діагностика програмно-апаратних засобів",
     "type": "лекція",
-    "location": "К1-705"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -107,7 +170,14 @@
     "week": "all",
     "subject": "Комп'ютерні мережі",
     "type": "лабораторна",
-    "location": "К1-505"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "505",
+        "full": "К1-505",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -118,7 +188,14 @@
     "week": "all",
     "subject": "Тестування і діагностика програмно-апаратних засобів",
     "type": "лекція",
-    "location": "К1-603"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "603",
+        "full": "К1-603",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -129,7 +206,14 @@
     "week": "all",
     "subject": "Захист інформації в інформаційно-комунікаційних системах",
     "type": "лабораторна",
-    "location": "К1-801"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "801",
+        "full": "К1-801",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -140,7 +224,14 @@
     "week": "all",
     "subject": "Інженерія програмного забезпечення",
     "type": "лабораторна",
-    "location": "К1-606"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "606",
+        "full": "К1-606",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -151,7 +242,14 @@
     "week": "1",
     "subject": "Іноземна мова професійно-ділового спрямування (англійська)",
     "type": "практична",
-    "location": "К1-303"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "303",
+        "full": "К1-303",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -162,7 +260,14 @@
     "week": "2",
     "subject": "Іноземна мова професійно-ділового спрямування (англійська)",
     "type": "практична",
-    "location": "К1-309"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "309",
+        "full": "К1-309",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -173,7 +278,14 @@
     "week": "all",
     "subject": "Захист інформації в інформаційно-комунікаційних системах",
     "type": "лабораторна",
-    "location": "К1-803"
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "803",
+        "full": "К1-803",
+        "building_valid": true
+      }
+    ]
   },
   {
     "group": "fis-si41",
@@ -184,6 +296,13 @@
     "week": "all",
     "subject": "Захист інформації в інформаційно-комунікаційних системах",
     "type": "лекція",
-    "location": "ATutor"
+    "rooms": [
+      {
+        "building": null,
+        "room": "ATutor",
+        "full": "ATutor",
+        "building_valid": false
+      }
+    ]
   }
 ]
