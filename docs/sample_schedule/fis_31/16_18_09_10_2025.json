@@ -1,0 +1,344 @@
+[
+  {
+    "group": "fis-si31",
+    "day": "понеділок",
+    "subgroup": 2,
+    "lesson": "2",
+    "period": "9:30-10:50",
+    "week": "all",
+    "subject": "Паралельні та розподілені обчислення",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "601",
+        "full": "К1-601",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "вівторок",
+    "subgroup": 1,
+    "lesson": "2",
+    "period": "9:30-10:50",
+    "week": "all",
+    "subject": "Цифрове опрацювання сигналів",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "603",
+        "full": "К1-603",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "середа",
+    "subgroup": 1,
+    "lesson": "2",
+    "period": "9:30-10:50",
+    "week": "1",
+    "subject": "Комп'ютерна електроніка та схемотехніка",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "605",
+        "full": "К1-605",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "ЧЕТВЕР",
+    "subgroup": "all",
+    "lesson": "2",
+    "period": "9:30-10:50",
+    "week": "all",
+    "subject": "Веб-технології",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": null,
+        "room": "ATutor",
+        "full": "ATutor",
+        "building_valid": false
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "п'ятниця",
+    "subgroup": 1,
+    "lesson": "2",
+    "period": "9:30-10:50",
+    "week": "all",
+    "subject": "Архітектура та проєктування програмного забезпечення",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К2",
+        "room": "61",
+        "full": "К2-61",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "п'ятниця",
+    "subgroup": 2,
+    "lesson": "2",
+    "period": "9:30-10:50",
+    "week": "all",
+    "subject": "Веб-технології",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "701",
+        "full": "К1-701",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "понеділок",
+    "subgroup": "all",
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "all",
+    "subject": "Цифрове опрацювання сигналів",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "вівторок",
+    "subgroup": "all",
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "all",
+    "subject": "Паралельні та розподілені обчислення",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "середа",
+    "subgroup": "all",
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "1",
+    "subject": "Комп'ютерна електроніка та схемотехніка",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "705",
+        "full": "К1-705",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "ЧЕТВЕР",
+    "subgroup": "all",
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "all",
+    "subject": "Архітектура та проєктування програмного забезпечення",
+    "type": "лекція",
+    "rooms": [
+      {
+        "building": null,
+        "room": "ATutor",
+        "full": "ATutor",
+        "building_valid": false
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "п'ятниця",
+    "subgroup": 1,
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "all",
+    "subject": "Веб-технології",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "702",
+        "full": "К1-702",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "п'ятниця",
+    "subgroup": 2,
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "all",
+    "subject": "Архітектура та проєктування програмного забезпечення",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "101",
+        "full": "К1-101",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "середа",
+    "subgroup": 1,
+    "lesson": "3",
+    "period": "11:10-12:30",
+    "week": "2",
+    "subject": "Комп'ютерна електроніка та схемотехніка",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "605",
+        "full": "К1-605",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "понеділок",
+    "subgroup": 1,
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Паралельні та розподілені обчислення",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "601",
+        "full": "К1-601",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "вівторок",
+    "subgroup": 2,
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Цифрове опрацювання сигналів",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "603",
+        "full": "К1-603",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "середа",
+    "subgroup": 2,
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Комп'ютерна електроніка та схемотехніка",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "605",
+        "full": "К1-605",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "п'ятниця",
+    "subgroup": "all",
+    "lesson": "4",
+    "period": "13:00-14:20",
+    "week": "all",
+    "subject": "Іноземна мова професійно-ділового спрямування (англійська)",
+    "type": "практична",
+    "rooms": [
+      {
+        "building": "К2",
+        "room": "7",
+        "full": "К2-7",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "п'ятниця",
+    "subgroup": "all",
+    "lesson": "5",
+    "period": "14:40-16:00",
+    "week": "1",
+    "subject": "Українська мова (за професійним спрямуванням)",
+    "type": "практична",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "311",
+        "full": "К1-311",
+        "building_valid": true
+      }
+    ]
+  },
+  {
+    "group": "fis-si31",
+    "day": "вівторок",
+    "subgroup": "all",
+    "lesson": "7",
+    "period": "17:40-19:00",
+    "week": "all",
+    "subject": "Іноземна мова професійно-ділового спрямування (німецька)",
+    "type": "практична",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "309",
+        "full": "К1-309",
+        "building_valid": true
+      }
+    ]
+  }
+]
