@@ -1,0 +1,20 @@
+[
+  {
+    "group": "fis-si31",
+    "day": "понеділок",
+    "subgroup": 2,
+    "lesson": "2",
+    "period": "9:30-10:50",
+    "week": "all",
+    "subject": "Паралельні та розподілені обчислення",
+    "type": "лабораторна",
+    "rooms": [
+      {
+        "building": "К1",
+        "room": "601",
+        "full": "К1-601",
+        "building_valid": true
+      }
+    ]
+  }
+]
